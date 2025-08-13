@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
      return MaterialApp(
        theme: ThemeData(canvasColor: AppColors.gold),
       initialRoute: Splash.routeName,
+      debugShowCheckedModeBanner: false,
       routes: {
         Splash.routeName:(_) => const Splash(),
         Home.routeName:(_) => const Home() ,

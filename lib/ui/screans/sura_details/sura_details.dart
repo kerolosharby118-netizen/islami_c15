@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami/model/sura_model.dart';
 import 'package:islami/ui/screans/home/tabs/quran/quran_tab.dart';
+import 'package:islami/ui/utils/app_assets.dart';
 import 'package:islami/ui/utils/app_colors.dart';
 import 'package:islami/ui/utils/app_text_styles.dart';
 
@@ -28,25 +29,49 @@ class _SuraDetailsState extends State<SuraDetails> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         centerTitle: true,
-        leading: Icon(Icons.arrow_back, color: AppColors.gold),
+        leading: InkWell(
+            onTap: (){
+              Navigator.pop(context);
+            },
+            child: Icon(Icons.arrow_back, color: AppColors.gold)),
         title: Text(sura.nameEn, style: AppTextStyel.goldBold24),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text(
-            sura.nameAr,
-            style: AppTextStyel.goldBold24,
-            textAlign: TextAlign.center,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+
+                Image.asset(AppAssets.leftPattern),
+                Expanded(
+                  child: Text(
+                    sura.nameAr,
+                    style: AppTextStyel.goldBold24,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                Image.asset(AppAssets.rightPattern)
+              ],
+            ),
           ),
           suraContent.isEmpty
               ? Center(child: CircularProgressIndicator(color: AppColors.gold))
-              : Text(
+              :
+          Expanded(
+            child: SingleChildScrollView(
+              child: Padding(padding: EdgeInsets.all(16),
+                child: Text(
                   suraContent,
                   style: AppTextStyel.goldBold20,
                   textAlign: TextAlign.center,
                   textDirection: TextDirection.rtl,
                 ),
+              ),
+            ),
+          ),
+          Image.asset(AppAssets.mosqueImage)
         ],
       ),
     );

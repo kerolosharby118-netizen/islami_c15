@@ -10,6 +10,9 @@ abstract final class AppAssets{
   static const String recentSuraImage = 'assets/images/recent_sura_image.png' ;
   static const String splashImage = 'assets/images/splash_image.png';
   static const String suraNumberGround = 'assets/images/sura_number_background.png';
+  static const String leftPattern = 'assets/images/left_pattern.png';
+  static const String rightPattern = 'assets/images/right_pattern.png';
+  static const String mosqueImage = 'assets/images/mosque_image.png';
 
 
 }
