@@ -38,14 +38,14 @@ class _SebhaTabState extends State<SebhaTab>
   void _incrementCounter() {
     setState(() {
       counter++;
-      rotationAngle += pi / 15; // يخلي السبحة تلف تدريجياً
+      rotationAngle += pi / 15;
 
       if (counter % 30 == 0) {
         phraseIndex = (phraseIndex + 1) % phrases.length;
       }
     });
 
-    _controller.forward(from: 0.0); // يشغل الأنيميشن
+    _controller.forward(from: 0.0);
   }
 
   @override
@@ -71,7 +71,7 @@ class _SebhaTabState extends State<SebhaTab>
             children: [
               const SizedBox(height: 20),
 
-              // ✅ اللوجو أول حاجة
+
               Image.asset(
                 AppAssets.islamiLogo,
                 width: 290,
@@ -80,7 +80,7 @@ class _SebhaTabState extends State<SebhaTab>
 
               const SizedBox(height: 30),
 
-              // ✅ النص الرئيسي بخط Janna LT Bold
+
               const Text(
                 "سبح اسم ربك الأعلى",
                 style: TextStyle(
@@ -101,7 +101,7 @@ class _SebhaTabState extends State<SebhaTab>
                   child: Stack(
                     alignment: Alignment.center,
                     children: [
-                      // ✅ السبحة هي اللي بتلف
+
                       AnimatedBuilder(
                         animation: _controller,
                         builder: (context, child) {
@@ -117,9 +117,9 @@ class _SebhaTabState extends State<SebhaTab>
                         ),
                       ),
 
-                      // ✅ النصوص (الأذكار + العدّاد) ثابتة
+
                       Positioned(
-                        top: 200, // ↔️ عدّل الرقم حسب مكان الفراغ في الصورة
+                        top: 200,
                         child: Column(
                           children: [
                             Text(
