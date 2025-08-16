@@ -16,6 +16,7 @@ dependencies:
 
   cupertino_icons: ^1.0.8
   carousel_slider: ^5.1.1
+  shared_preferences: ^2.5.3
 
 dev_dependencies:
   flutter_test:
@@ -33,3 +34,10 @@ flutter:
     - assets/images/
     - assets/files/quran/
     - assets/files/
+    - assets/fonts/
+  fonts:
+    - family: JannaLT
+      fonts:
+        - asset: assets/fonts/JannaLT-Regular.ttf
+        - asset: assets/fonts/JannaLT-Bold.ttf
+          weight: 700

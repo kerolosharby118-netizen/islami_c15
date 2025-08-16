@@ -13,8 +13,10 @@ abstract final class AppAssets{
   static const String leftPattern = 'assets/images/left_pattern.png';
   static const String rightPattern = 'assets/images/right_pattern.png';
   static const String mosqueImage = 'assets/images/mosque_image.png';
-  static const String hadethBg  = 'assets/images/hadeth_Card.png';
-
+  static const String hadethBg  = 'assets/images/Hadith_Card.png';
+  static const String recentSura = 'assets/images/recent_sura_card.png';
+  static const String sebhaBg = 'assets/images/sebha_bg.png';
+  static const String sebhaBd = 'assets/images/sebha_bd.png';
 
 
 }

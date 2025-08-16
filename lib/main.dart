@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:islami/ui/screans/hadeth_details/hadeth_details.dart';
 import 'package:islami/ui/screans/home/home.dart';
+import 'package:islami/ui/screans/home/tabs/sebha/sebha_tab.dart';
 import 'package:islami/ui/screans/splash/splash.dart';
 import 'package:islami/ui/screans/sura_details/sura_details.dart';
 import 'package:islami/ui/utils/app_colors.dart';
@@ -23,7 +25,9 @@ class MyApp extends StatelessWidget {
       routes: {
         Splash.routeName:(_) => const Splash(),
         Home.routeName:(_) => const Home() ,
-        SuraDetails.routename:(_) => const SuraDetails()
+        SuraDetails.routename:(_) => const SuraDetails(),
+        HadethDetails.routename:(_) => const HadethDetails(),
+        SebhaTab.routName :(_) => const SebhaTab()
       },
 
     );
